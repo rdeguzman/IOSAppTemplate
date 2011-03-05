@@ -10,28 +10,30 @@ Build Dir: /Volumes/temp/iphone-builds. Personal preference to set build dir in 
 
 ## Installation
 
- 1. git clone git://github.com/rdeguzman/IOSAppTemplate.git
+1. Download
+  $ git clone git://github.com/rdeguzman/IOSAppTemplate.git
 
- 2. mv IOSAppTemplate Sample (name of your project)
+1. Specify Project Name
+  mv IOSAppTemplate Sample
 
- 3. Rename Mobile.xcodeproj to Sample.xcodeproj
+1. Rename Mobile.xcodeproj to Sample.xcodeproj
 
- 4. Launch XCode by double clicking Sample.xcodeproj
+1. Launch XCode by double clicking Sample.xcodeproj
   - Dont rename Mobile_Prefix.pch
   - Dont rename Mobile-Info.plist
   - Dont rename UnitTests-Info.plist
 
- 5. Reference GHUnitIOS.framework. 
+1. Reference GHUnitIOS.framework. 
   - Download from https://github.com/downloads/gabriel/gh-unit/GHUnitIOS-0.4.28.zip
   - From Xcode. Click on UnitTests/Frameworks/GHUnitIOS.framework. Its red/missing. Delete this
   - Targets > Double Click "UnitTests" > General > + (lower left) + Add Other + Location of GHUnitIOS.framework
 
- 6. Reference fmdb https://github.com/ccgus/fmdb.git
+1. Reference fmdb https://github.com/ccgus/fmdb.git
   - Delete fmdb/ (folder) in Xcode.
   - Drag fmdb/src directory under "Groups & Files"
   - Delete Reference (not "Move To Trash") fmdb.m
 
- 7. Build "Sample" 
+1. Build "Sample" 
   - Set Active Target to "Mobile"
   - Set Active Executable to "Mobile"
   - <ctrl> b to build
@@ -42,7 +44,7 @@ Build Dir: /Volumes/temp/iphone-builds. Personal preference to set build dir in 
     - Search for "Packaging"
     - Change setting of Product Name to "Sample"
 
- 8. Build "UnitTests"
+1. Build "UnitTests"
   - Set Active Target to "UnitTests"
   - Set Active Executable to "UnitTests"
   - <ctrl> b to build
